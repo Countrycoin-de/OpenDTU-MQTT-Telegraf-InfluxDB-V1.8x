@@ -26,3 +26,5 @@ Please note that Telegraf has to be restarted when making changes to this file.
 To troubleshoot problems, here are a few tips:
 
 * A debug output can be made in the browser. 'http://<Your_telegraf_IP>:8086/debug/vars'
+* In the config-file the debug output can be activated. A bit strange for me, but the debug output is then in the file /var/log/syslog  
+Please be aware that the file becomes very large and uses the entire disk space if used for a long time.
