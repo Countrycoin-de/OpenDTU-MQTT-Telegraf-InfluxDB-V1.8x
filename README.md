@@ -11,4 +11,16 @@ Furthermore here is a howto from [Kraego](https://github.com/Kraego/OpenDTU-Graf
 
 And finally the link to [OpenDTU](https://github.com/tbnobody/OpenDTU)
 
+## Telegraf
 
+A few explanations:
+
+* In my telegraf configuration I use several config-files
+* The main configuration is in /etc/telegraf/telegraf.conf
+* All other configurations are located in the directory /etc/telegraf/telegraf.d/
+* Therefore I have created my own config-file for OpenDTU -> opendtu.conf
+* I also use several databases in Influx. With a 'tag' the target database is determined.  
+Please note that this must be done in all other config-files as well, otherwise datasets may be written to other databases. I will publish examples for this.
+* Furthermore, like  [smainz](https://github.com/smainz/OpenDTU-MQTT-Telegraf-influxdb-integration), I use environment variables.
+* The file location for the environment variables is /etc/default/telegraf  
+Please note that Telegraf has to be restarted when making changes to this file.
