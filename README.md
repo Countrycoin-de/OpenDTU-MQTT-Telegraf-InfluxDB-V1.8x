@@ -5,10 +5,8 @@ Get OpenDTU topics from MQTT and imports them into InfluxDB V1.8x
 This is a telegraf configuration, which collects data sent by an OpenDTU and imports it into an InfluxDB(Version 1.8x).
 Because I didn't find a telegraf configuration for Influx V1.8x anywhere, I created my own.
 
-As a template I have used the work of [smainz](https://github.com/smainz/OpenDTU-MQTT-Telegraf-influxdb-integration)
-
-Furthermore here is a howto from [Kraego](https://github.com/Kraego/OpenDTU-Grafana-Howto/tree/main)
-
+As a template I have used the work of [smainz](https://github.com/smainz/OpenDTU-MQTT-Telegraf-influxdb-integration)  
+Furthermore here is a howto from [Kraego](https://github.com/Kraego/OpenDTU-Grafana-Howto/tree/main)  
 And finally the link to [OpenDTU](https://github.com/tbnobody/OpenDTU)
 
 ## Telegraf
@@ -24,3 +22,7 @@ Please note that this must be done in all other config-files as well, otherwise 
 * Furthermore, like  [smainz](https://github.com/smainz/OpenDTU-MQTT-Telegraf-influxdb-integration), I use environment variables.
 * The file location for the environment variables is /etc/default/telegraf  
 Please note that Telegraf has to be restarted when making changes to this file.
+
+To troubleshoot problems, here are a few tips:
+
+* A debug output can be made in the browser. 'http://<Your_telegraf_IP>:8086/debug/vars'
